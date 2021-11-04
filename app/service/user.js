@@ -1,6 +1,6 @@
-"use strict";
+'use strict';
 
-const { Service } = require("egg");
+const { Service } = require('egg');
 
 class UserService extends Service {
   async getUserInfo(userID) {

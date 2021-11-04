@@ -1,6 +1,6 @@
-"use strict";
+'use strict';
 
-const { Controller } = require("egg");
+const { Controller } = require('egg');
 
 /**
  * 在类里面定义实例化方法，UserController类被实例化后里面的方法才能使用
@@ -29,7 +29,7 @@ class UserController extends Controller {
     const { ctx } = this;
     ctx.body = {
       contentFormClient: ctx.request.body,
-      msg: "post request demo",
+      msg: 'post request demo',
     };
   }
 
@@ -42,7 +42,7 @@ class UserController extends Controller {
     const res = await ctx.service.user.getUserInfo(ctx.params.id);
     ctx.body = {
       data: res,
-      msg: "successfuly get",
+      msg: 'successfuly get',
       code: 200,
     };
   }

@@ -26,9 +26,9 @@ module.exports = appInfo => {
   config.security = {
     // 放过所有 content-type 为 `application/json` 的请求，开发环境先这样配着，后面看下怎么改
     csrf: {
-      ignoreJSON: true
-    }
-  }
+      ignoreJSON: true,
+    },
+  };
 
   return {
     ...config,
