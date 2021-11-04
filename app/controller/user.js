@@ -19,8 +19,18 @@ class UserController extends Controller {
    */
   async dynamicRouteDemo() {
     const { ctx } = this;
-
     ctx.body = ctx.params;
+  }
+
+  /**
+   * post请求读取前端的requestBody的内容，content-typea为application/json
+   */
+  async postRequestDemo() {
+    const { ctx } = this;
+    ctx.body = {
+      contentFormClient: ctx.request.body,
+      msg: 'post request demo'
+    }
   }
 }
 

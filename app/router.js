@@ -14,4 +14,7 @@ module.exports = (app) => {
   router.get("/dynamicRouteDemo/:myID", controller.user.dynamicRouteDemo);
 
   router.get("/queryParamsDemo", controller.user.queryParamsDemo);
+
+  router.post("/postRequestDemo", controller.user.postRequestDemo);
+
 };
