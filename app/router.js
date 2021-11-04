@@ -17,4 +17,5 @@ module.exports = (app) => {
 
   router.post("/postRequestDemo", controller.user.postRequestDemo);
 
+  router.get("/userInfo/:id", controller.user.getUserInfo);
 };

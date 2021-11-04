@@ -1,6 +1,6 @@
 "use strict";
 
-const Controller = require("egg").Controller;
+const { Controller } = require("egg");
 
 /**
  * 在类里面定义实例化方法，UserController类被实例化后里面的方法才能使用
@@ -29,8 +29,22 @@ class UserController extends Controller {
     const { ctx } = this;
     ctx.body = {
       contentFormClient: ctx.request.body,
-      msg: 'post request demo'
-    }
+      msg: "post request demo",
+    };
+  }
+
+  /**
+   * 获取用户信息
+   */
+  async getUserInfo() {
+    const { ctx } = this;
+    // 在/app/service下面的类中定义的方法，最后都会挂载到ctx实例上来，所以这里可以这样调用
+    const res = await ctx.service.user.getUserInfo(ctx.params.id);
+    ctx.body = {
+      data: res,
+      msg: "successfuly get",
+      code: 200,
+    };
   }
 }
 
