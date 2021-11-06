@@ -2,8 +2,9 @@
 
 /** @type Egg.EggPlugin */
 module.exports = {
-  // had enabled by egg
-  // static: {
-  //   enable: true,
-  // }
+  // 当使用egg-mysql这个插件时，会在全局app应用中注册一个mysql变量
+  mysql: {
+    enable: true,
+    package: 'egg-mysql',
+  },
 };
