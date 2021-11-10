@@ -17,5 +17,9 @@ module.exports = app => {
 
   router.post('/postRequestDemo', controller.user.postRequestDemo);
 
+  // 从这里开始干正事
+
+  router.get('/phone-list', controller.oppo.queryPhoneList);
+
   router.get('/userInfo/:id', controller.user.getUserInfo);
 };
